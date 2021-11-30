@@ -5,15 +5,17 @@
 
 2. From local shell copy example_2 to cluster:
 ```console
-    $ scp -r ./example_2/ ssh_address:/home/sshuser/
+	$ ssh sshuser@[ssh_address] "mkdir -p /home/sshuser/example_2"
+	$ scp -r  [git repo path]* sshuser@[ssh_address]:/home/sshuser/example_2
 ```
 **where:**<br/>
 * sshuser - is default name created by the Azure<br/>
-* ssh_address - address from the first step.
+* [ssh_address] - address from the first step.
+* [git repo path] - local git repository -> C:/Users/vdi-student/hadoop/example_2/
 
 3. Login to the cluster:
 ```console
-    $ ssh ssh_address
+    $ ssh sshuser@[ssh_address]
 ```
 **where:**<br/>
 * ssh_address - address from the first step.
@@ -25,7 +27,7 @@
 
 5. Run script only local:
 ```console
-    $ python ./example_2/ratingcount.py data.txt
+    $ python /home/sshuser/example_2/ratingcount.py /home/sshuser/example_2/data.txt
 ```
 
 ## Additional steps:
