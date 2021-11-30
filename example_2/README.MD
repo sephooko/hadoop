@@ -33,7 +33,7 @@
 ## Additional steps:
 6. From cluster shell copy data.txt to hdfs:
 ```console
-    $ hdfs dfs -copyFromLocal ./example_2/data.txt /user/data.txt
+    $ hdfs dfs -copyFromLocal /home/sshuser/example_2/data.txt /user/data.txt
 ```
 7. Run script on cluster:
 ```console
