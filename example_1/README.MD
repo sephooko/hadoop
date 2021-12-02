@@ -1,19 +1,21 @@
 # Mapreduce
 
-1. From Azure portal copy cluster ssh address.
+1. From Azure portal copy cluster ssh [address].
     Grupy zasobów  -> "name of the group" (ex bigdata) -> enter to the "HDInsight cluster" -> Properties -> Copy Secure Shell (SSH).
 
 2. From local shell copy example_1 to cluster:
 ```console
-    $ scp -r ./example_1/ ssh_address:/home/sshuser/
+	$ ssh sshuser@[ssh_address] "mkdir -p /home/sshuser/example_1"
+	$ scp -r  [git repo path]* sshuser@[ssh_address]:/home/sshuser/example_1
 ```
 **where:**<br/>
 * sshuser - is default name created by the Azure<br/>
-* ssh_address - address from the first step.
+* [ssh_address] - address from the first step.
+* [git repo path] - local git repository -> C:/Users/vdi-student/hadoop/example_1/
 
 3. Login to the cluster:
 ```console
-    $ ssh ssh_address
+    $ ssh sshuser@[ssh_address]
 ```
 **where:**<br/>
 * ssh_address - address from the first step.
