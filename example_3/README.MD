@@ -9,8 +9,8 @@
 	$ scp -r  [git repo path]* sshuser@[ssh_address]:/home/sshuser/example_3
 ```
 **where:**<br/>
-	sshuser - is default name created by the Azure
-	[ssh_address] - address from the first step.
+	sshuser - is default name created by the Azure</br>
+	[ssh_address] - address from the first step.</br>
 	[git repo path] - local git repository -> C:/Users/vdi-student/hadoop/example_3/
 
 3. Login to the cluster:
