@@ -6,19 +6,19 @@
 2. From local shell copy example_3 to cluster:
 ```console
     $ ssh sshuser@[ssh_address] "mkdir -p /home/sshuser/example_3"
-	$ scp -r  [git repo path]* sshuser@[ssh_address]:/home/sshuser/example_3
+    $ scp -r  [git repo path]* sshuser@[ssh_address]:/home/sshuser/example_3
 ```
 **where:**<br/>
-	sshuser - is default name created by the Azure</br>
-	[ssh_address] - address from the first step.</br>
-	[git repo path] - local git repository -> C:/Users/vdi-student/hadoop/example_3/
+* sshuser - is default name created by the Azure</br>
+* [ssh_address] - address from the first step.</br>
+* [git repo path] - local git repository -> C:/Users/vdi-student/hadoop/example_3/
 
 3. Login to the cluster:
 ```console
     $ ssh ssh_address
 ```
 **where:**<br/>
-* ssh_address - address from the first step.
+* [ssh_address] - address from the first step.</br>
 
 4. From cluster shell copy data.txt to hdfs:
 ```console
